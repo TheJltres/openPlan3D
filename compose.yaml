@@ -1,0 +1,10 @@
+services:
+  openplan3d:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: openplan3d:local
+    container_name: openplan3d
+    restart: unless-stopped
+    ports:
+      - "8080:3000"
